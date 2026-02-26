@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "category": "blue",
+    "question": "¿Cuál es el río más largo del mundo?",
+    "options": ["Amazonas", "Nilo", "Yangtsé", "Misisipi"],
+    "correctAnswer": "Amazonas"
+  },
+  {
+    "id": 2,
+    "category": "blue",
+    "question": "¿Cuál es la capital de Australia?",
+    "options": ["Sídney", "Melbourne", "Canberra", "Brisbane"],
+    "correctAnswer": "Canberra"
+  },
+  {
+    "id": 3,
+    "category": "red",
+    "question": "¿Quién pintó 'La última cena'?",
+    "options": ["Miguel Ángel", "Rafael", "Leonardo da Vinci", "Donatello"],
+    "correctAnswer": "Leonardo da Vinci"
+  },
+  {
+    "id": 4,
+    "category": "red",
+    "question": "¿Qué obra está considerada la primera novela moderna?",
+    "options": ["Cien años de soledad", "Don Quijote de la Mancha", "Orgullo y prejuicio", "Crimen y castigo"],
+    "correctAnswer": "Don Quijote de la Mancha"
+  },
+  {
+    "id": 5,
+    "category": "green",
+    "question": "¿Cuál es el elemento químico con el símbolo 'O'?",
+    "options": ["Oro", "Osmio", "Oxígeno", "Oganesón"],
+    "correctAnswer": "Oxígeno"
+  },
+  {
+    "id": 6,
+    "category": "green",
+    "question": "¿Qué tipo de animal es la ballena?",
+    "options": ["Pez", "Mamífero", "Reptil", "Anfibio"],
+    "correctAnswer": "Mamífero"
+  },
+  {
+    "id": 7,
+    "category": "yellow",
+    "question": "¿En qué año llegó el hombre a la Luna?",
+    "options": ["1965", "1969", "1971", "1959"],
+    "correctAnswer": "1969"
+  },
+  {
+    "id": 8,
+    "category": "yellow",
+    "question": "¿Quién fue el primer emperador romano?",
+    "options": ["Julio César", "Nerón", "Augusto", "Calígula"],
+    "correctAnswer": "Augusto"
+  }
+]
