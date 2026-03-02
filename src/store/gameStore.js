@@ -1,10 +1,11 @@
 import { create } from 'zustand';
+import questionsData from '../data/questions.json';
 
 export const CATEGORIES = {
-    blue: { id: 'blue', color: 'bg-blue-500', name: 'Deportes' },
-    red: { id: 'red', color: 'bg-red-500', name: 'Geografía e Historia' },
-    green: { id: 'green', color: 'bg-green-500', name: 'Cultura Pop' },
-    yellow: { id: 'yellow', color: 'bg-yellow-500', name: 'Otros' },
+    blue: { id: 'blue', color: 'bg-blue-500', name: 'Geografía e Historia' },
+    red: { id: 'red', color: 'bg-red-500', name: 'Deportes' },
+    yellow: { id: 'yellow', color: 'bg-yellow-500', name: 'Cultura Pop' },
+    green: { id: 'green', color: 'bg-green-500', name: 'Naturales' },
 };
 
 export const BOARD_SPACES = {
@@ -15,9 +16,9 @@ export const BOARD_SPACES = {
 for (let i = 0; i < 24; i++) {
     const cats = ['blue', 'red', 'green', 'yellow'];
     let cat = cats[i % 4];
-    if (i === 6) cat = 'green';
-    if (i === 12) cat = 'red';
-    if (i === 18) cat = 'yellow';
+    if (i === 6) cat = 'red';
+    if (i === 12) cat = 'yellow';
+    if (i === 18) cat = 'green';
 
     BOARD_SPACES[`ring-${i}`] = {
         id: `ring-${i}`,
@@ -44,6 +45,11 @@ spokeTargets.forEach((targetIndex, spokeNum) => {
     }
 });
 
+// 4 fixed wildcard positions: one between each pair of wedge stars in the outer ring
+// Wedges are at ring-0, ring-6, ring-12, ring-18 → midpoints at ring-3, ring-9, ring-15, ring-21
+const WILDCARD_SPACES = new Set(['ring-3', 'ring-9', 'ring-15', 'ring-21']);
+const generateWildcardSpaces = () => WILDCARD_SPACES;
+
 const getNextSpaces = (currentId, player) => {
     const isHeadingCenter = player.wedges.length === 4;
 
@@ -57,14 +63,12 @@ const getNextSpaces = (currentId, player) => {
 
     if (space.isSpoke) {
         if (isHeadingCenter) {
-            // Move inwards towards center
             if (space.spokeIndex > 0) {
                 return [`spoke-${space.spokeNum}-${space.spokeIndex - 1}`];
             } else {
                 return ['center'];
             }
         } else {
-            // Move outwards towards ring
             if (space.spokeIndex < 4) {
                 return [`spoke-${space.spokeNum}-${space.spokeIndex + 1}`];
             } else {
@@ -76,19 +80,23 @@ const getNextSpaces = (currentId, player) => {
 
     if (space.isRing) {
         if (isHeadingCenter) {
-            // Turn inwards if at a spoke entrance
             const spokeEntrances = { 0: 0, 6: 1, 12: 2, 18: 3 };
             if (space.ringIndex in spokeEntrances) {
                 const spokeNum = spokeEntrances[space.ringIndex];
                 return [`spoke-${spokeNum}-4`];
             }
         }
-        // Move clockwise around the ring
         const nextIndex = (space.ringIndex + 1) % 24;
         return [`ring-${nextIndex}`];
     }
 
     return [currentId];
+};
+
+const getRandomQuestion = (category) => {
+    const categoryQuestions = questionsData.filter(q => q.category === category);
+    if (categoryQuestions.length === 0) return null;
+    return categoryQuestions[Math.floor(Math.random() * categoryQuestions.length)];
 };
 
 
@@ -100,6 +108,7 @@ export const useGameStore = create((set, get) => ({
     currentQuestion: null,
     winner: null,
     isMoving: false,
+    wildcardSpaces: new Set(),
 
     addPlayer: (player) => set((state) => ({
         players: [...state.players, { ...player, wedges: [], position: 'center' }]
@@ -111,7 +120,14 @@ export const useGameStore = create((set, get) => ({
 
     startGame: () => set((state) => {
         if (state.players.length === 0) return state;
-        return { status: 'playing', currentPlayerIndex: 0, diceRoll: null, currentQuestion: null, isMoving: false };
+        return {
+            status: 'playing',
+            currentPlayerIndex: 0,
+            diceRoll: null,
+            currentQuestion: null,
+            isMoving: false,
+            wildcardSpaces: generateWildcardSpaces()
+        };
     }),
 
     rollDice: () => {
@@ -120,7 +136,6 @@ export const useGameStore = create((set, get) => ({
         const roll = Math.floor(Math.random() * 6) + 1;
         set({ diceRoll: roll, isMoving: true });
 
-        // Save original position so we can revert if they fail a question
         const stateInitial = get();
         const initialPosition = stateInitial.players[stateInitial.currentPlayerIndex].position;
 
@@ -145,17 +160,27 @@ export const useGameStore = create((set, get) => ({
 
                 const spaceInfo = BOARD_SPACES[nextPos];
                 const isUncollectedWedge = spaceInfo.isWedge && !currentPlayer.wedges.includes(spaceInfo.category);
+                const isWildcard = state.wildcardSpaces.has(nextPos);
 
                 if (stepsTaken >= roll || isFinalCenter || isUncollectedWedge) {
                     clearInterval(interval);
                     const landedSpace = BOARD_SPACES[nextPos];
+
+                    // Wildcard and final center both get a random-category question
+                    const randomCat = ['blue', 'red', 'yellow', 'green'][Math.floor(Math.random() * 4)];
+                    const questionCategory = (isFinalCenter || isWildcard) ? randomCat : landedSpace.category;
+                    const questionData = getRandomQuestion(questionCategory);
+
                     return {
                         players: updatedPlayers,
                         isMoving: false,
                         currentQuestion: {
-                            category: landedSpace.category,
-                            isFinalCenter,
-                            startPosition: initialPosition
+                            category: questionCategory,
+                            isFinalCenter: isFinalCenter || isWildcard, // wildcard also shows HEIS style
+                            isRealFinalCenter: isFinalCenter, // only true final center wins
+                            startPosition: initialPosition,
+                            isWildcard,
+                            questionData,
                         }
                     };
                 }
@@ -165,7 +190,7 @@ export const useGameStore = create((set, get) => ({
         }, 300);
     },
 
-    answerQuestion: (isCorrect) => set((state) => {
+    answerQuestion: (selectedOption) => set((state) => {
         const { players, currentPlayerIndex, currentQuestion } = state;
         const currentPlayer = players[currentPlayerIndex];
         let updatedPlayers = [...players];
@@ -173,9 +198,12 @@ export const useGameStore = create((set, get) => ({
         let newStatus = state.status;
         let winner = null;
 
+        const isCorrect = currentQuestion?.questionData
+            ? selectedOption === currentQuestion.questionData.correctAnswer
+            : selectedOption === true;
+
         if (isCorrect && currentQuestion) {
-            if (currentQuestion.isFinalCenter) {
-                // If they answer HEIS correctly at the center, they win!
+            if (currentQuestion.isRealFinalCenter) {
                 newStatus = 'gameover';
                 winner = updatedPlayers[currentPlayerIndex];
             } else {
@@ -186,6 +214,7 @@ export const useGameStore = create((set, get) => ({
                         wedges: [...currentPlayer.wedges, currentQuestion.category]
                     };
                 }
+                // If correct, keep the same player's turn (don't advance)
             }
         } else {
             // Failed the question. Return to start position!
@@ -215,6 +244,7 @@ export const useGameStore = create((set, get) => ({
         diceRoll: null,
         currentQuestion: null,
         winner: null,
-        isMoving: false
+        isMoving: false,
+        wildcardSpaces: new Set()
     })
 }));

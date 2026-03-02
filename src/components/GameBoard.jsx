@@ -4,13 +4,12 @@ import QuestionCard from './QuestionCard';
 import { Star, CircleDot } from 'lucide-react';
 
 export default function GameBoard() {
-    const { players, diceRoll, rollDice, currentPlayerIndex, currentQuestion, isMoving } = useGameStore();
+    const { players, diceRoll, rollDice, currentPlayerIndex, currentQuestion, isMoving, wildcardSpaces } = useGameStore();
     const currentPlayer = players[currentPlayerIndex];
 
     // Calculate positions for all spaces based on the new graph
     const spacesLayout = useMemo(() => {
-        const ringRadius = 240; // larger radius for main ring
-
+        const ringRadius = 240;
         let layout = [];
 
         // Ring
@@ -35,7 +34,6 @@ export default function GameBoard() {
         for (let s = 0; s < 4; s++) {
             const angle = targetsAngles[s];
             for (let i = 0; i < 5; i++) {
-                // Distance from center out to ring
                 const stepRadius = 50 + (i * 35);
                 const x = Math.cos(angle) * stepRadius;
                 const y = Math.sin(angle) * stepRadius;
@@ -79,19 +77,21 @@ export default function GameBoard() {
                 {/* Visual Board Layout */}
                 <div className={`relative w-[600px] h-[600px] transition-all duration-500 ${currentQuestion ? 'scale-90 opacity-40 blur-[2px] pointer-events-none' : 'scale-100 opacity-100'}`}>
 
-                    {/* Render Spaces */}
+                    {/* Render Spaces (no player tokens here) */}
                     {spacesLayout.map((space) => {
-                        const catColor = CATEGORIES[space.category].color;
-                        const playersHere = players.filter(p => p.position === space.id);
+                        const isWildcard = wildcardSpaces && wildcardSpaces.has(space.id);
+                        const catColor = isWildcard ? 'bg-slate-600' : CATEGORIES[space.category].color;
 
-                        let spaceClasses = `absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg flex items-center justify-center border-2 border-slate-900 shadow-md transition-all ${catColor}`;
+                        let spaceClasses = `absolute top-1/2 left-1/2 rounded-lg flex items-center justify-center border-2 border-slate-900 shadow-md transition-all ${catColor}`;
 
                         if (space.isCenter) {
                             spaceClasses += " w-20 h-20 rounded-full z-10 border-4 shadow-2xl";
                         } else if (space.isWedge) {
                             spaceClasses += " w-14 h-14 ring-4 ring-white/30 z-20 shadow-[0_0_20px_inherit]";
+                        } else if (isWildcard) {
+                            spaceClasses += " w-10 h-10 ring-2 ring-white/40 z-10 border-slate-500";
                         } else {
-                            spaceClasses += " w-10 h-10 opacity-80 hover:opacity-100";
+                            spaceClasses += " w-10 h-10 opacity-80";
                         }
 
                         return (
@@ -104,34 +104,49 @@ export default function GameBoard() {
                             >
                                 {space.isCenter && <CircleDot size={40} className="text-white fill-white/20" />}
                                 {space.isWedge && <Star size={24} className="text-white fill-white/40" />}
+                                {isWildcard && (
+                                    <span className="text-white font-black text-base leading-none select-none">?</span>
+                                )}
+                            </div>
+                        );
+                    })}
 
-                                {/* Render tokens for players on this spot */}
-                                {playersHere.length > 0 && (() => {
-                                    // Sort players so current player renders last (on top)
-                                    const sortedPlayers = [...playersHere].sort((a, b) => {
-                                        if (a.id === currentPlayer?.id) return 1;
-                                        if (b.id === currentPlayer?.id) return -1;
-                                        return 0;
-                                    });
+                    {/* Player tokens rendered ABOVE all spaces */}
+                    {spacesLayout.map((space) => {
+                        const playersHere = players.filter(p => p.position === space.id);
+                        if (playersHere.length === 0) return null;
 
-                                    return (
-                                        <div className="absolute top-0 right-0 w-full h-full pointer-events-none z-30">
-                                            <div className="absolute -top-4 -right-4 flex flex-wrap gap-[4px] justify-end min-w-[40px]">
-                                                {sortedPlayers.map((p, i) => {
-                                                    const isCurrent = p.id === currentPlayer?.id;
-                                                    return (
-                                                        <div
-                                                            key={p.id}
-                                                            className={`rounded-full ${p.color} border-2 shadow-xl transition-all duration-300 ${isCurrent ? 'w-8 h-8 border-white ring-4 ring-white/50 animate-pulse z-50' : 'w-5 h-5 border-slate-900 animate-bounce'}`}
-                                                            style={{ animationDelay: `${i * 0.1}s` }}
-                                                            title={p.name}
-                                                        />
-                                                    );
-                                                })}
-                                            </div>
-                                        </div>
-                                    );
-                                })()}
+                        const sortedPlayers = [...playersHere].sort((a, b) => {
+                            if (a.id === currentPlayer?.id) return 1;
+                            if (b.id === currentPlayer?.id) return -1;
+                            return 0;
+                        });
+
+                        return (
+                            <div
+                                key={`tokens-${space.id}`}
+                                className="absolute top-1/2 left-1/2 pointer-events-none"
+                                style={{
+                                    transform: `translate(calc(-50% + ${space.x}px), calc(-50% + ${space.y}px))`,
+                                    zIndex: 100,
+                                }}
+                            >
+                                <div className="absolute -top-4 -right-4 flex flex-wrap gap-[4px] justify-end min-w-[40px]">
+                                    {sortedPlayers.map((p, i) => {
+                                        const isCurrent = p.id === currentPlayer?.id;
+                                        return (
+                                            <div
+                                                key={p.id}
+                                                className={`rounded-full ${p.color} border-2 shadow-xl transition-all duration-300 ${isCurrent
+                                                    ? 'w-8 h-8 border-white ring-4 ring-white/50 animate-pulse'
+                                                    : 'w-5 h-5 border-slate-900 animate-bounce'
+                                                    }`}
+                                                style={{ animationDelay: `${i * 0.1}s` }}
+                                                title={p.name}
+                                            />
+                                        );
+                                    })}
+                                </div>
                             </div>
                         );
                     })}
@@ -143,6 +158,20 @@ export default function GameBoard() {
                         <QuestionCard />
                     </div>
                 )}
+            </div>
+
+            {/* Legend */}
+            <div className="mt-4 flex flex-wrap justify-center gap-3 text-xs text-slate-400">
+                {Object.values(CATEGORIES).map(cat => (
+                    <div key={cat.id} className="flex items-center gap-1.5">
+                        <span className={`inline-block w-3 h-3 rounded-sm ${cat.color}`}></span>
+                        <span>{cat.name}</span>
+                    </div>
+                ))}
+                <div className="flex items-center gap-1.5">
+                    <span className="inline-block w-3 h-3 rounded-sm bg-slate-600 border border-white/30 text-white font-black text-[8px] flex items-center justify-center leading-none">?</span>
+                    <span>Comodín</span>
+                </div>
             </div>
         </div>
     );
