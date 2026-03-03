@@ -8,29 +8,34 @@ export const CATEGORIES = {
     green: { id: 'green', color: 'bg-green-500', name: 'Naturales' },
 };
 
+export const RING_SIZE = 36;
+
 export const BOARD_SPACES = {
     'center': { id: 'center', category: 'blue', isWedge: false, isCenter: true },
 };
 
-// Outer ring (24 spaces)
-for (let i = 0; i < 24; i++) {
+// Outer ring (36 spaces) — wedges at 0, 9, 18, 27
+const WEDGE_INDICES = [0, 9, 18, 27];
+for (let i = 0; i < RING_SIZE; i++) {
     const cats = ['blue', 'red', 'green', 'yellow'];
     let cat = cats[i % 4];
-    if (i === 6) cat = 'red';
-    if (i === 12) cat = 'yellow';
-    if (i === 18) cat = 'green';
+    // Force category at wedge positions
+    if (i === 0) cat = 'blue';
+    if (i === 9) cat = 'red';
+    if (i === 18) cat = 'yellow';
+    if (i === 27) cat = 'green';
 
     BOARD_SPACES[`ring-${i}`] = {
         id: `ring-${i}`,
         category: cat,
-        isWedge: [0, 6, 12, 18].includes(i),
+        isWedge: WEDGE_INDICES.includes(i),
         isRing: true,
         ringIndex: i
     };
 }
 
-// 4 spokes (5 spaces each) connecting center to wedges 0, 6, 12, 18
-const spokeTargets = [0, 6, 12, 18];
+// 4 spokes (5 spaces each) connecting center to wedges 0, 9, 18, 27
+const spokeTargets = [0, 9, 18, 27];
 spokeTargets.forEach((targetIndex, spokeNum) => {
     for (let i = 0; i < 5; i++) {
         const cats = ['yellow', 'blue', 'green', 'red'];
@@ -45,16 +50,18 @@ spokeTargets.forEach((targetIndex, spokeNum) => {
     }
 });
 
-// 4 fixed wildcard positions: one between each pair of wedge stars in the outer ring
-// Wedges are at ring-0, ring-6, ring-12, ring-18 → midpoints at ring-3, ring-9, ring-15, ring-21
-const WILDCARD_SPACES = new Set(['ring-3', 'ring-9', 'ring-15', 'ring-21']);
+// Wildcards: midpoints between wedges at 4, 13, 22, 31
+const WILDCARD_SPACES = new Set(['ring-4', 'ring-13', 'ring-22', 'ring-31']);
 const generateWildcardSpaces = () => WILDCARD_SPACES;
+
+// Spoke entrances: wedge ring indices → spoke number
+const SPOKE_ENTRANCES = { 0: 0, 9: 1, 18: 2, 27: 3 };
 
 const getNextSpaces = (currentId, player) => {
     const isHeadingCenter = player.wedges.length === 4;
 
     if (currentId === 'center') {
-        if (isHeadingCenter) return ['center']; // Reached the end
+        if (isHeadingCenter) return ['center'];
         const randomSpoke = Math.floor(Math.random() * 4);
         return [`spoke-${randomSpoke}-0`];
     }
@@ -72,31 +79,31 @@ const getNextSpaces = (currentId, player) => {
             if (space.spokeIndex < 4) {
                 return [`spoke-${space.spokeNum}-${space.spokeIndex + 1}`];
             } else {
-                const targets = [0, 6, 12, 18];
-                return [`ring-${targets[space.spokeNum]}`];
+                return [`ring-${spokeTargets[space.spokeNum]}`];
             }
         }
     }
 
     if (space.isRing) {
-        if (isHeadingCenter) {
-            const spokeEntrances = { 0: 0, 6: 1, 12: 2, 18: 3 };
-            if (space.ringIndex in spokeEntrances) {
-                const spokeNum = spokeEntrances[space.ringIndex];
-                return [`spoke-${spokeNum}-4`];
-            }
+        if (isHeadingCenter && space.ringIndex in SPOKE_ENTRANCES) {
+            const spokeNum = SPOKE_ENTRANCES[space.ringIndex];
+            return [`spoke-${spokeNum}-4`];
         }
-        const nextIndex = (space.ringIndex + 1) % 24;
+        const nextIndex = (space.ringIndex + 1) % RING_SIZE;
         return [`ring-${nextIndex}`];
     }
 
     return [currentId];
 };
 
-const getRandomQuestion = (category) => {
-    const categoryQuestions = questionsData.filter(q => q.category === category);
-    if (categoryQuestions.length === 0) return null;
-    return categoryQuestions[Math.floor(Math.random() * categoryQuestions.length)];
+const getRandomQuestion = (category, usedQuestions) => {
+    const all = questionsData.filter(q => q.category === category);
+    if (all.length === 0) return null;
+    const usedIds = usedQuestions[category] || new Set();
+    let pool = all.filter(q => !usedIds.has(q.id));
+    // If pool exhausted, reset and use all
+    if (pool.length === 0) pool = all;
+    return pool[Math.floor(Math.random() * pool.length)];
 };
 
 
@@ -109,6 +116,7 @@ export const useGameStore = create((set, get) => ({
     winner: null,
     isMoving: false,
     wildcardSpaces: new Set(),
+    usedQuestions: {}, // { [category]: Set<id> }
 
     addPlayer: (player) => set((state) => ({
         players: [...state.players, { ...player, wedges: [], position: 'center' }]
@@ -126,7 +134,8 @@ export const useGameStore = create((set, get) => ({
             diceRoll: null,
             currentQuestion: null,
             isMoving: false,
-            wildcardSpaces: generateWildcardSpaces()
+            wildcardSpaces: generateWildcardSpaces(),
+            usedQuestions: {}
         };
     }),
 
@@ -169,15 +178,24 @@ export const useGameStore = create((set, get) => ({
                     // Wildcard and final center both get a random-category question
                     const randomCat = ['blue', 'red', 'yellow', 'green'][Math.floor(Math.random() * 4)];
                     const questionCategory = (isFinalCenter || isWildcard) ? randomCat : landedSpace.category;
-                    const questionData = getRandomQuestion(questionCategory);
+                    const questionData = getRandomQuestion(questionCategory, state.usedQuestions);
+
+                    // Mark this question as used
+                    const updatedUsed = { ...state.usedQuestions };
+                    if (questionData?.id) {
+                        const prev = updatedUsed[questionCategory] ? new Set(updatedUsed[questionCategory]) : new Set();
+                        prev.add(questionData.id);
+                        updatedUsed[questionCategory] = prev;
+                    }
 
                     return {
                         players: updatedPlayers,
                         isMoving: false,
+                        usedQuestions: updatedUsed,
                         currentQuestion: {
                             category: questionCategory,
-                            isFinalCenter: isFinalCenter || isWildcard, // wildcard also shows HEIS style
-                            isRealFinalCenter: isFinalCenter, // only true final center wins
+                            isFinalCenter: isFinalCenter || isWildcard,
+                            isRealFinalCenter: isFinalCenter,
                             startPosition: initialPosition,
                             isWildcard,
                             questionData,
@@ -245,6 +263,7 @@ export const useGameStore = create((set, get) => ({
         currentQuestion: null,
         winner: null,
         isMoving: false,
-        wildcardSpaces: new Set()
+        wildcardSpaces: new Set(),
+        usedQuestions: {}
     })
 }));

@@ -1822,5 +1822,1205 @@
       "Tailandia"
     ],
     "correctAnswer": "Corea del Sur"
+  },
+  {
+    "id": 339,
+    "category": "blue",
+    "question": "¿En qué continente se encuentra Etiopía?",
+    "options": [
+      "Asia",
+      "África",
+      "América del Sur",
+      "Oceanía"
+    ],
+    "correctAnswer": "África"
+  },
+  {
+    "id": 340,
+    "category": "blue",
+    "question": "¿Cuál es la capital de Australia?",
+    "options": [
+      "Sídney",
+      "Melbourne",
+      "Canberra",
+      "Brisbane"
+    ],
+    "correctAnswer": "Canberra"
+  },
+  {
+    "id": 341,
+    "category": "blue",
+    "question": "¿Qué océano separa Europa de América?",
+    "options": [
+      "Pacífico",
+      "Índico",
+      "Ártico",
+      "Atlántico"
+    ],
+    "correctAnswer": "Atlántico"
+  },
+  {
+    "id": 342,
+    "category": "blue",
+    "question": "¿En qué año terminó la Segunda Guerra Mundial?",
+    "options": [
+      "1943",
+      "1944",
+      "1945",
+      "1946"
+    ],
+    "correctAnswer": "1945"
+  },
+  {
+    "id": 343,
+    "category": "blue",
+    "question": "¿Quién fue el primer presidente de los Estados Unidos?",
+    "options": [
+      "Abraham Lincoln",
+      "Thomas Jefferson",
+      "George Washington",
+      "John Adams"
+    ],
+    "correctAnswer": "George Washington"
+  },
+  {
+    "id": 344,
+    "category": "blue",
+    "question": "¿Cuál es el río más largo del mundo?",
+    "options": [
+      "Amazonas",
+      "Nilo",
+      "Yangtsé",
+      "Misisipi"
+    ],
+    "correctAnswer": "Nilo"
+  },
+  {
+    "id": 345,
+    "category": "blue",
+    "question": "¿En qué país se fundó la Cruz Roja?",
+    "options": [
+      "Francia",
+      "Suecia",
+      "Suiza",
+      "Países Bajos"
+    ],
+    "correctAnswer": "Suiza"
+  },
+  {
+    "id": 346,
+    "category": "blue",
+    "question": "¿Cuál es la montaña más alta del mundo?",
+    "options": [
+      "K2",
+      "Kangchenjunga",
+      "Everest",
+      "Lhotse"
+    ],
+    "correctAnswer": "Everest"
+  },
+  {
+    "id": 347,
+    "category": "blue",
+    "question": "¿En qué año cayó el Muro de Berlín?",
+    "options": [
+      "1987",
+      "1988",
+      "1989",
+      "1990"
+    ],
+    "correctAnswer": "1989"
+  },
+  {
+    "id": 348,
+    "category": "blue",
+    "question": "¿Cuál es el país más grande del mundo por superficie?",
+    "options": [
+      "China",
+      "Canadá",
+      "Estados Unidos",
+      "Rusia"
+    ],
+    "correctAnswer": "Rusia"
+  },
+  {
+    "id": 349,
+    "category": "blue",
+    "question": "¿Qué civilización construyó Machu Picchu?",
+    "options": [
+      "Azteca",
+      "Maya",
+      "Inca",
+      "Olmeca"
+    ],
+    "correctAnswer": "Inca"
+  },
+  {
+    "id": 350,
+    "category": "blue",
+    "question": "¿Cuál es la capital de Japón?",
+    "options": [
+      "Osaka",
+      "Kioto",
+      "Hiroshima",
+      "Tokio"
+    ],
+    "correctAnswer": "Tokio"
+  },
+  {
+    "id": 351,
+    "category": "blue",
+    "question": "¿En qué año llegó Cristóbal Colón a América?",
+    "options": [
+      "1488",
+      "1490",
+      "1492",
+      "1495"
+    ],
+    "correctAnswer": "1492"
+  },
+  {
+    "id": 352,
+    "category": "blue",
+    "question": "¿Cuál es el desierto más grande del mundo?",
+    "options": [
+      "Sahara",
+      "Gobi",
+      "Kalahari",
+      "Ártico"
+    ],
+    "correctAnswer": "Ártico"
+  },
+  {
+    "id": 353,
+    "category": "blue",
+    "question": "¿Qué país tiene más islas del mundo?",
+    "options": [
+      "Indonesia",
+      "Filipinas",
+      "Suecia",
+      "Canadá"
+    ],
+    "correctAnswer": "Suecia"
+  },
+  {
+    "id": 354,
+    "category": "blue",
+    "question": "¿En qué año comenzó la Primera Guerra Mundial?",
+    "options": [
+      "1912",
+      "1913",
+      "1914",
+      "1915"
+    ],
+    "correctAnswer": "1914"
+  },
+  {
+    "id": 355,
+    "category": "blue",
+    "question": "¿Cuál fue la primera nación en conceder el voto a las mujeres?",
+    "options": [
+      "Nueva Zelanda",
+      "Australia",
+      "Finlandia",
+      "Noruega"
+    ],
+    "correctAnswer": "Nueva Zelanda"
+  },
+  {
+    "id": 356,
+    "category": "blue",
+    "question": "¿Cuál es el lago más profundo del mundo?",
+    "options": [
+      "Titicaca",
+      "Superior",
+      "Baikal",
+      "Tanganika"
+    ],
+    "correctAnswer": "Baikal"
+  },
+  {
+    "id": 357,
+    "category": "blue",
+    "question": "¿Qué país tiene más habitantes en el mundo?",
+    "options": [
+      "India",
+      "China",
+      "Estados Unidos",
+      "Indonesia"
+    ],
+    "correctAnswer": "India"
+  },
+  {
+    "id": 358,
+    "category": "blue",
+    "question": "¿En qué ciudad se firmó la Carta Magna en 1215?",
+    "options": [
+      "Londres",
+      "Winchester",
+      "Oxford",
+      "Runnymede"
+    ],
+    "correctAnswer": "Runnymede"
+  },
+  {
+    "id": 359,
+    "category": "blue",
+    "question": "¿Cuál es la capital de Brasil?",
+    "options": [
+      "São Paulo",
+      "Río de Janeiro",
+      "Salvador",
+      "Brasilia"
+    ],
+    "correctAnswer": "Brasilia"
+  },
+  {
+    "id": 360,
+    "category": "blue",
+    "question": "¿Qué muro fue construido para separar China de los pueblos del norte?",
+    "options": [
+      "Muralla de Adriano",
+      "Gran Muralla China",
+      "Muralla de Antonino",
+      "Limes Romano"
+    ],
+    "correctAnswer": "Gran Muralla China"
+  },
+  {
+    "id": 361,
+    "category": "blue",
+    "question": "¿En qué país está la ciudad de Dubái?",
+    "options": [
+      "Arabia Saudí",
+      "Qatar",
+      "Kuwait",
+      "Emiratos Árabes Unidos"
+    ],
+    "correctAnswer": "Emiratos Árabes Unidos"
+  },
+  {
+    "id": 362,
+    "category": "blue",
+    "question": "¿Cuál es el continente más pequeño del mundo?",
+    "options": [
+      "Europa",
+      "Antártida",
+      "Australia/Oceanía",
+      "América del Sur"
+    ],
+    "correctAnswer": "Australia/Oceanía"
+  },
+  {
+    "id": 363,
+    "category": "blue",
+    "question": "¿Quién fue el faraón bajo cuyo reinado se construyó la Gran Pirámide de Guiza?",
+    "options": [
+      "Ramsés II",
+      "Tutankamón",
+      "Keops",
+      "Nefertiti"
+    ],
+    "correctAnswer": "Keops"
+  },
+  {
+    "id": 364,
+    "category": "red",
+    "question": "¿Cuántas veces ha ganado España la Eurocopa de fútbol?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctAnswer": "3"
+  },
+  {
+    "id": 365,
+    "category": "red",
+    "question": "¿En qué ciudad española se celebró el Mundial de Baloncesto de 2014?",
+    "options": [
+      "Madrid",
+      "Barcelona",
+      "Sevilla",
+      "Valencia"
+    ],
+    "correctAnswer": "Madrid"
+  },
+  {
+    "id": 366,
+    "category": "red",
+    "question": "¿Qué tenista español tiene más títulos de Roland Garros?",
+    "options": [
+      "Carlos Alcaraz",
+      "Arantxa Sánchez Vicario",
+      "Rafael Nadal",
+      "Alex Corretja"
+    ],
+    "correctAnswer": "Rafael Nadal"
+  },
+  {
+    "id": 367,
+    "category": "red",
+    "question": "¿Qué equipo ganó la primera Liga española de fútbol en 1929?",
+    "options": [
+      "Real Madrid",
+      "Athletic Club",
+      "Barcelona",
+      "Real Unión"
+    ],
+    "correctAnswer": "Barcelona"
+  },
+  {
+    "id": 368,
+    "category": "red",
+    "question": "¿En qué año ganó España su primera Copa del Mundo de fútbol?",
+    "options": [
+      "2006",
+      "2008",
+      "2010",
+      "2012"
+    ],
+    "correctAnswer": "2010"
+  },
+  {
+    "id": 369,
+    "category": "red",
+    "question": "¿Quién es el máximo goleador histórico de la selección española de fútbol?",
+    "options": [
+      "Raúl",
+      "David Villa",
+      "Fernando Torres",
+      "Álvaro Morata"
+    ],
+    "correctAnswer": "David Villa"
+  },
+  {
+    "id": 370,
+    "category": "red",
+    "question": "¿Qué club español ha ganado más veces la Copa del Rey?",
+    "options": [
+      "Real Madrid",
+      "Athletic Club",
+      "Barcelona",
+      "Atlético de Madrid"
+    ],
+    "correctAnswer": "Athletic Club"
+  },
+  {
+    "id": 371,
+    "category": "red",
+    "question": "¿En qué ciudad española se celebraron los Juegos Olímpicos de 1992?",
+    "options": [
+      "Madrid",
+      "Sevilla",
+      "Valencia",
+      "Barcelona"
+    ],
+    "correctAnswer": "Barcelona"
+  },
+  {
+    "id": 372,
+    "category": "red",
+    "question": "¿Cómo se llama el circuito de Fórmula 1 ubicado en Montmeló, Barcelona?",
+    "options": [
+      "Circuito de Jerez",
+      "Circuit de Barcelona-Catalunya",
+      "Circuito del Jarama",
+      "Circuito de Valencia"
+    ],
+    "correctAnswer": "Circuit de Barcelona-Catalunya"
+  },
+  {
+    "id": 373,
+    "category": "red",
+    "question": "¿Qué piloto español ha ganado más Campeonatos del Mundo de MotoGP?",
+    "options": [
+      "Jorge Lorenzo",
+      "Dani Pedrosa",
+      "Álex Márquez",
+      "Marc Márquez"
+    ],
+    "correctAnswer": "Marc Márquez"
+  },
+  {
+    "id": 374,
+    "category": "red",
+    "question": "¿Cuál es el estadio con más capacidad de España?",
+    "options": [
+      "Wanda Metropolitano",
+      "Estadio de la Cartuja",
+      "Camp Nou",
+      "Santiago Bernabéu"
+    ],
+    "correctAnswer": "Camp Nou"
+  },
+  {
+    "id": 375,
+    "category": "red",
+    "question": "¿En qué deporte compitió Mireia Belmonte ganando medallas olímpicas para España?",
+    "options": [
+      "Atletismo",
+      "Ciclismo",
+      "Natación",
+      "Vela"
+    ],
+    "correctAnswer": "Natación"
+  },
+  {
+    "id": 376,
+    "category": "red",
+    "question": "¿Qué equipo español de baloncesto ha ganado más Euroligas?",
+    "options": [
+      "Barcelona",
+      "Real Madrid",
+      "Estudiantes",
+      "Valencia Basket"
+    ],
+    "correctAnswer": "Real Madrid"
+  },
+  {
+    "id": 377,
+    "category": "red",
+    "question": "¿Qué deporte practica Garbiñe Muguruza?",
+    "options": [
+      "Golf",
+      "Bádminton",
+      "Tenis",
+      "Squash"
+    ],
+    "correctAnswer": "Tenis"
+  },
+  {
+    "id": 378,
+    "category": "red",
+    "question": "¿En qué año debutó Iker Casillas con la selección española de fútbol?",
+    "options": [
+      "1998",
+      "1999",
+      "2000",
+      "2002"
+    ],
+    "correctAnswer": "2000"
+  },
+  {
+    "id": 379,
+    "category": "red",
+    "question": "¿Cuántas veces ha ganado el Real Madrid la Champions League?",
+    "options": [
+      "13",
+      "14",
+      "15",
+      "16"
+    ],
+    "correctAnswer": "15"
+  },
+  {
+    "id": 380,
+    "category": "red",
+    "question": "¿Qué boxeador español fue campeón mundial peso pluma en los años 90?",
+    "options": [
+      "Sergio Martínez",
+      "Juan Manuel Márquez",
+      "Javier Castillejo",
+      "Poli Díaz"
+    ],
+    "correctAnswer": "Poli Díaz"
+  },
+  {
+    "id": 381,
+    "category": "red",
+    "question": "¿Qué ciudad es sede del club de fútbol Deportivo de La Coruña?",
+    "options": [
+      "Vigo",
+      "Santiago de Compostela",
+      "Ferrol",
+      "A Coruña"
+    ],
+    "correctAnswer": "A Coruña"
+  },
+  {
+    "id": 382,
+    "category": "red",
+    "question": "¿En qué deporte compite Carlos Sainz Jr., hijo del rallista español?",
+    "options": [
+      "Motociclismo",
+      "Fórmula 1",
+      "Rally",
+      "NASCAR"
+    ],
+    "correctAnswer": "Fórmula 1"
+  },
+  {
+    "id": 383,
+    "category": "red",
+    "question": "¿Quién fue el entrenador de la selección española campeona del mundo en 2010?",
+    "options": [
+      "Julen Lopetegui",
+      "Vicente del Bosque",
+      "Luis Aragonés",
+      "Javier Clemente"
+    ],
+    "correctAnswer": "Vicente del Bosque"
+  },
+  {
+    "id": 384,
+    "category": "red",
+    "question": "¿En qué deporte destacó Arantxa Sánchez Vicario?",
+    "options": [
+      "Atletismo",
+      "Golf",
+      "Tenis",
+      "Natación"
+    ],
+    "correctAnswer": "Tenis"
+  },
+  {
+    "id": 385,
+    "category": "red",
+    "question": "¿Qué atleta español ganó el oro en maratón en los Juegos de Barcelona 1992?",
+    "options": [
+      "Fermín Cacho",
+      "Martín Fiz",
+      "Abel Antón",
+      "Ninguno; no hubo ganador español"
+    ],
+    "correctAnswer": "Ninguno; no hubo ganador español"
+  },
+  {
+    "id": 386,
+    "category": "red",
+    "question": "¿En qué posición juega Sergio Busquets?",
+    "options": [
+      "Portero",
+      "Defensa central",
+      "Pivote / Centrocampista defensivo",
+      "Delantero"
+    ],
+    "correctAnswer": "Pivote / Centrocampista defensivo"
+  },
+  {
+    "id": 387,
+    "category": "red",
+    "question": "¿Cuál es el palmarés de la selección española masculina de baloncesto en el Eurobasket?",
+    "options": [
+      "3 títulos",
+      "4 títulos",
+      "5 títulos",
+      "6 títulos"
+    ],
+    "correctAnswer": "4 títulos"
+  },
+  {
+    "id": 388,
+    "category": "red",
+    "question": "¿Qué club fundó la primera sección profesional de balonmano de España?",
+    "options": [
+      "Barça",
+      "Real Madrid",
+      "Atlético de Madrid",
+      "Portland San Antonio"
+    ],
+    "correctAnswer": "Barça"
+  },
+  {
+    "id": 389,
+    "category": "yellow",
+    "question": "¿En qué año se estrenó la primera película de Harry Potter?",
+    "options": [
+      "1999",
+      "2000",
+      "2001",
+      "2002"
+    ],
+    "correctAnswer": "2001"
+  },
+  {
+    "id": 390,
+    "category": "yellow",
+    "question": "¿Qué artista pintó la obra 'La Noche Estrellada'?",
+    "options": [
+      "Claude Monet",
+      "Pablo Picasso",
+      "Salvador Dalí",
+      "Vincent van Gogh"
+    ],
+    "correctAnswer": "Vincent van Gogh"
+  },
+  {
+    "id": 391,
+    "category": "yellow",
+    "question": "¿En qué país se desarrolla la serie 'El Juego del Calamar'?",
+    "options": [
+      "Japón",
+      "China",
+      "Corea del Sur",
+      "Tailandia"
+    ],
+    "correctAnswer": "Corea del Sur"
+  },
+  {
+    "id": 392,
+    "category": "yellow",
+    "question": "¿Cómo se llama el protagonista de la saga de videojuegos 'The Legend of Zelda'?",
+    "options": [
+      "Zelda",
+      "Ganon",
+      "Link",
+      "Navi"
+    ],
+    "correctAnswer": "Link"
+  },
+  {
+    "id": 393,
+    "category": "yellow",
+    "question": "¿Qué banda británica publicó el álbum 'Dark Side of the Moon'?",
+    "options": [
+      "Led Zeppelin",
+      "The Who",
+      "Pink Floyd",
+      "The Rolling Stones"
+    ],
+    "correctAnswer": "Pink Floyd"
+  },
+  {
+    "id": 394,
+    "category": "yellow",
+    "question": "¿Quién interpreta a Iron Man en el Universo Cinematográfico de Marvel?",
+    "options": [
+      "Chris Evans",
+      "Robert Downey Jr.",
+      "Chris Hemsworth",
+      "Mark Ruffalo"
+    ],
+    "correctAnswer": "Robert Downey Jr."
+  },
+  {
+    "id": 395,
+    "category": "yellow",
+    "question": "¿Cuántos libros componen la saga Harry Potter?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correctAnswer": "7"
+  },
+  {
+    "id": 396,
+    "category": "yellow",
+    "question": "¿Cómo se llama la serie de Netflix basada en los años 80 con poderes sobrenaturales?",
+    "options": [
+      "Dark",
+      "Mindhunter",
+      "Stranger Things",
+      "The OA"
+    ],
+    "correctAnswer": "Stranger Things"
+  },
+  {
+    "id": 397,
+    "category": "yellow",
+    "question": "¿Qué película ganó el Oscar a Mejor Película en 2020?",
+    "options": [
+      "1917",
+      "Joker",
+      "Parásitos",
+      "Once Upon a Time in Hollywood"
+    ],
+    "correctAnswer": "Parásitos"
+  },
+  {
+    "id": 398,
+    "category": "yellow",
+    "question": "¿Quién cantó 'Thriller' en 1982?",
+    "options": [
+      "Prince",
+      "Michael Jackson",
+      "David Bowie",
+      "Elton John"
+    ],
+    "correctAnswer": "Michael Jackson"
+  },
+  {
+    "id": 399,
+    "category": "yellow",
+    "question": "¿En qué universo de cómics aparece el Hombre Araña?",
+    "options": [
+      "DC",
+      "Image",
+      "Dark Horse",
+      "Marvel"
+    ],
+    "correctAnswer": "Marvel"
+  },
+  {
+    "id": 400,
+    "category": "yellow",
+    "question": "¿Qué actor protagonizó la saga 'El Señor de los Anillos' como Frodo?",
+    "options": [
+      "Elijah Wood",
+      "Tobey Maguire",
+      "Daniel Radcliffe",
+      "Andrew Garfield"
+    ],
+    "correctAnswer": "Elijah Wood"
+  },
+  {
+    "id": 401,
+    "category": "yellow",
+    "question": "¿Cómo se llama la plataforma de streaming de Disney?",
+    "options": [
+      "Disney+",
+      "DisneyGo",
+      "DisneyMax",
+      "DisneyPlay"
+    ],
+    "correctAnswer": "Disney+"
+  },
+  {
+    "id": 402,
+    "category": "yellow",
+    "question": "¿Qué personaje de dibujos animados vive en una piña bajo el mar?",
+    "options": [
+      "Patrick Star",
+      "Sandy Mejillas",
+      "Bob Esponja",
+      "Calamardo Tentáculos"
+    ],
+    "correctAnswer": "Bob Esponja"
+  },
+  {
+    "id": 403,
+    "category": "yellow",
+    "question": "¿Cuántos elementos componen el grupo musical 'BTS'?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correctAnswer": "7"
+  },
+  {
+    "id": 404,
+    "category": "yellow",
+    "question": "¿Qué canción popularizó el 'Gangnam Style'?",
+    "options": [
+      "BIGBANG",
+      "2NE1",
+      "PSY",
+      "EXO"
+    ],
+    "correctAnswer": "PSY"
+  },
+  {
+    "id": 405,
+    "category": "yellow",
+    "question": "¿En qué videojuego aparece el personaje Kratos?",
+    "options": [
+      "Halo",
+      "God of War",
+      "Devil May Cry",
+      "Doom"
+    ],
+    "correctAnswer": "God of War"
+  },
+  {
+    "id": 406,
+    "category": "yellow",
+    "question": "¿Quién escribió la novela 'Orgullo y Prejuicio'?",
+    "options": [
+      "Charlotte Brontë",
+      "Mary Shelley",
+      "Jane Austen",
+      "George Eliot"
+    ],
+    "correctAnswer": "Jane Austen"
+  },
+  {
+    "id": 407,
+    "category": "yellow",
+    "question": "¿Qué serie de televisión española se ambienta en La Casa de la Moneda?",
+    "options": [
+      "El internado",
+      "Vis a Vis",
+      "La Casa de Papel",
+      "Élite"
+    ],
+    "correctAnswer": "La Casa de Papel"
+  },
+  {
+    "id": 408,
+    "category": "yellow",
+    "question": "¿Qué película de Pixar presenta a una rata cocinera llamada Remy?",
+    "options": [
+      "Buscando a Nemo",
+      "Up",
+      "Ratatouille",
+      "Cars"
+    ],
+    "correctAnswer": "Ratatouille"
+  },
+  {
+    "id": 409,
+    "category": "yellow",
+    "question": "¿Cuántas temporadas tiene la serie 'Breaking Bad'?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correctAnswer": "5"
+  },
+  {
+    "id": 410,
+    "category": "yellow",
+    "question": "¿Qué artista lanzó el álbum '25' en 2015?",
+    "options": [
+      "Taylor Swift",
+      "Beyoncé",
+      "Adele",
+      "Rihanna"
+    ],
+    "correctAnswer": "Adele"
+  },
+  {
+    "id": 411,
+    "category": "yellow",
+    "question": "¿Cómo se llama el villano principal de 'El Rey León'?",
+    "options": [
+      "Scar",
+      "Simba",
+      "Mufasa",
+      "Rafiki"
+    ],
+    "correctAnswer": "Scar"
+  },
+  {
+    "id": 412,
+    "category": "yellow",
+    "question": "¿En qué año se publicó el primer iPhone?",
+    "options": [
+      "2005",
+      "2006",
+      "2007",
+      "2008"
+    ],
+    "correctAnswer": "2007"
+  },
+  {
+    "id": 413,
+    "category": "yellow",
+    "question": "¿Qué personaje de 'Friends' tiene el trabajo de paleontólogo?",
+    "options": [
+      "Chandler",
+      "Joey",
+      "Ross",
+      "Phoebe"
+    ],
+    "correctAnswer": "Ross"
+  },
+  {
+    "id": 414,
+    "category": "green",
+    "question": "¿Cuál es el elemento más abundante en el universo?",
+    "options": [
+      "Helio",
+      "Oxígeno",
+      "Hidrógeno",
+      "Carbono"
+    ],
+    "correctAnswer": "Hidrógeno"
+  },
+  {
+    "id": 415,
+    "category": "green",
+    "question": "¿Cuántos huesos tiene el cuerpo humano adulto?",
+    "options": [
+      "196",
+      "206",
+      "216",
+      "226"
+    ],
+    "correctAnswer": "206"
+  },
+  {
+    "id": 416,
+    "category": "green",
+    "question": "¿Qué planeta está más cerca del Sol?",
+    "options": [
+      "Venus",
+      "Tierra",
+      "Marte",
+      "Mercurio"
+    ],
+    "correctAnswer": "Mercurio"
+  },
+  {
+    "id": 417,
+    "category": "green",
+    "question": "¿Cuál es el símbolo químico del oro?",
+    "options": [
+      "Go",
+      "Or",
+      "Au",
+      "Ag"
+    ],
+    "correctAnswer": "Au"
+  },
+  {
+    "id": 418,
+    "category": "green",
+    "question": "¿Qué órgano del cuerpo produce la insulina?",
+    "options": [
+      "Hígado",
+      "Riñón",
+      "Páncreas",
+      "Bazo"
+    ],
+    "correctAnswer": "Páncreas"
+  },
+  {
+    "id": 419,
+    "category": "green",
+    "question": "¿Cuántos planetas tiene el sistema solar?",
+    "options": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "correctAnswer": "8"
+  },
+  {
+    "id": 420,
+    "category": "green",
+    "question": "¿Qué proceso utilizan las plantas para producir alimentos con la luz solar?",
+    "options": [
+      "Respiración",
+      "Fotosíntesis",
+      "Transpiración",
+      "Absorción"
+    ],
+    "correctAnswer": "Fotosíntesis"
+  },
+  {
+    "id": 421,
+    "category": "green",
+    "question": "¿Cuál es el número atómico del carbono?",
+    "options": [
+      "4",
+      "6",
+      "8",
+      "12"
+    ],
+    "correctAnswer": "6"
+  },
+  {
+    "id": 422,
+    "category": "green",
+    "question": "¿Qué animal tiene el corazón más grande en relación a su cuerpo?",
+    "options": [
+      "Elefante",
+      "Ballena azul",
+      "Cachalote",
+      "Caballo"
+    ],
+    "correctAnswer": "Ballena azul"
+  },
+  {
+    "id": 423,
+    "category": "green",
+    "question": "¿Cuántos cromosomas tiene una célula humana normal?",
+    "options": [
+      "23",
+      "44",
+      "46",
+      "48"
+    ],
+    "correctAnswer": "46"
+  },
+  {
+    "id": 424,
+    "category": "green",
+    "question": "¿Qué gas cubre aproximadamente el 78% de la atmósfera terrestre?",
+    "options": [
+      "Oxígeno",
+      "Dióxido de carbono",
+      "Nitrógeno",
+      "Argón"
+    ],
+    "correctAnswer": "Nitrógeno"
+  },
+  {
+    "id": 425,
+    "category": "green",
+    "question": "¿Cuánto tarda la luz del Sol en llegar a la Tierra?",
+    "options": [
+      "Aproximadamente 8 minutos",
+      "Aproximadamente 1 hora",
+      "Aproximadamente 8 horas",
+      "Aproximadamente 8 segundos"
+    ],
+    "correctAnswer": "Aproximadamente 8 minutos"
+  },
+  {
+    "id": 426,
+    "category": "green",
+    "question": "¿Cuál es el órgano más grande del cuerpo humano?",
+    "options": [
+      "Hígado",
+      "Pulmón",
+      "Piel",
+      "Cerebro"
+    ],
+    "correctAnswer": "Piel"
+  },
+  {
+    "id": 427,
+    "category": "green",
+    "question": "¿Qué tipo de estrella es el Sol?",
+    "options": [
+      "Gigante roja",
+      "Enana blanca",
+      "Enana amarilla",
+      "Supergigante azul"
+    ],
+    "correctAnswer": "Enana amarilla"
+  },
+  {
+    "id": 428,
+    "category": "green",
+    "question": "¿Cuál es el metal más ligero?",
+    "options": [
+      "Aluminio",
+      "Titanio",
+      "Litio",
+      "Magnesio"
+    ],
+    "correctAnswer": "Litio"
+  },
+  {
+    "id": 429,
+    "category": "green",
+    "question": "¿Qué científico formuló la teoría de la evolución por selección natural?",
+    "options": [
+      "Gregor Mendel",
+      "Louis Pasteur",
+      "Charles Darwin",
+      "Isaac Newton"
+    ],
+    "correctAnswer": "Charles Darwin"
+  },
+  {
+    "id": 430,
+    "category": "green",
+    "question": "¿Cuántas fases tiene la mitosis?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correctAnswer": "4"
+  },
+  {
+    "id": 431,
+    "category": "green",
+    "question": "¿Cuál es la velocidad de la luz en el vacío?",
+    "options": [
+      "150.000 km/s",
+      "200.000 km/s",
+      "300.000 km/s",
+      "400.000 km/s"
+    ],
+    "correctAnswer": "300.000 km/s"
+  },
+  {
+    "id": 432,
+    "category": "green",
+    "question": "¿Qué molécula transporta el oxígeno en la sangre?",
+    "options": [
+      "Glucosa",
+      "Hemoglobina",
+      "Melanina",
+      "Colágeno"
+    ],
+    "correctAnswer": "Hemoglobina"
+  },
+  {
+    "id": 433,
+    "category": "green",
+    "question": "¿Cuántos lados tiene un hexágono?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correctAnswer": "6"
+  },
+  {
+    "id": 434,
+    "category": "green",
+    "question": "¿Qué animal es conocido como el rey de los mares?",
+    "options": [
+      "Orca",
+      "Tiburón blanco",
+      "Calamar gigante",
+      "Ballena azul"
+    ],
+    "correctAnswer": "Orca"
+  },
+  {
+    "id": 435,
+    "category": "green",
+    "question": "¿Cuál es la fórmula química del agua?",
+    "options": [
+      "HO",
+      "H2O",
+      "H3O",
+      "HO2"
+    ],
+    "correctAnswer": "H2O"
+  },
+  {
+    "id": 436,
+    "category": "green",
+    "question": "¿En qué unidad se mide la frecuencia del sonido?",
+    "options": [
+      "Decibelio",
+      "Hertz",
+      "Julio",
+      "Pascal"
+    ],
+    "correctAnswer": "Hertz"
+  },
+  {
+    "id": 437,
+    "category": "green",
+    "question": "¿Qué vitamina se produce en la piel con la exposición al sol?",
+    "options": [
+      "Vitamina A",
+      "Vitamina B12",
+      "Vitamina C",
+      "Vitamina D"
+    ],
+    "correctAnswer": "Vitamina D"
+  },
+  {
+    "id": 438,
+    "category": "green",
+    "question": "¿Cuántas capas tiene la Tierra?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correctAnswer": "4"
   }
 ]

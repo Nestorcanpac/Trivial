@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { useGameStore, CATEGORIES, BOARD_SPACES } from '../store/gameStore';
+import { useGameStore, CATEGORIES, BOARD_SPACES, RING_SIZE } from '../store/gameStore';
 import QuestionCard from './QuestionCard';
 import { Star, CircleDot } from 'lucide-react';
 
@@ -9,12 +9,12 @@ export default function GameBoard() {
 
     // Calculate positions for all spaces based on the new graph
     const spacesLayout = useMemo(() => {
-        const ringRadius = 240;
+        const ringRadius = 260;
         let layout = [];
 
-        // Ring
-        for (let i = 0; i < 24; i++) {
-            const angle = (i / 24) * 2 * Math.PI - Math.PI / 2;
+        // Ring (36 spaces)
+        for (let i = 0; i < RING_SIZE; i++) {
+            const angle = (i / RING_SIZE) * 2 * Math.PI - Math.PI / 2;
             const x = Math.cos(angle) * ringRadius;
             const y = Math.sin(angle) * ringRadius;
             layout.push({ ...BOARD_SPACES[`ring-${i}`], x, y });
@@ -23,13 +23,11 @@ export default function GameBoard() {
         // Center
         layout.push({ ...BOARD_SPACES['center'], x: 0, y: 0 });
 
-        // Spokes
-        const targetsAngles = [
-            -Math.PI / 2,   // 0 (top)
-            0,              // 6 (right)
-            Math.PI / 2,    // 12 (bottom)
-            Math.PI         // 18 (left)
-        ];
+        // Spokes — point to wedge positions 0, 9, 18, 27
+        const spokeWedgeIndices = [0, 9, 18, 27];
+        const targetsAngles = spokeWedgeIndices.map(
+            idx => (idx / RING_SIZE) * 2 * Math.PI - Math.PI / 2
+        );
 
         for (let s = 0; s < 4; s++) {
             const angle = targetsAngles[s];
@@ -57,7 +55,7 @@ export default function GameBoard() {
                     <p className="text-slate-400 text-lg font-medium">Tira el dado para jugar</p>
                 </div>
 
-                <div className="flex flex-col items-center gap-3">
+                <div className="flex flex-col items-center gap-3 z-10">
                     <button
                         onClick={rollDice}
                         disabled={currentQuestion !== null || isMoving}
@@ -72,7 +70,15 @@ export default function GameBoard() {
                 </div>
             </div>
 
-            <div className="flex-1 w-full flex items-center justify-center relative min-h-[600px]">
+            <div className="flex-1 w-full flex items-center justify-center gap-8 relative min-h-[600px]">
+                {/* Logo HEIS al lado del tablero */}
+                <div className="flex-shrink-0 hidden lg:block bg-white rounded-2xl p-6 shadow-lg border border-slate-200/80">
+                    <img
+                        src={`${import.meta.env.BASE_URL}heis.png`}
+                        alt="HEIS global - Packaging Healthcare"
+                        className="h-52 w-auto max-w-[260px] object-contain object-center opacity-95 hover:opacity-100 transition-opacity"
+                    />
+                </div>
 
                 {/* Visual Board Layout */}
                 <div className={`relative w-[600px] h-[600px] transition-all duration-500 ${currentQuestion ? 'scale-90 opacity-40 blur-[2px] pointer-events-none' : 'scale-100 opacity-100'}`}>
@@ -131,15 +137,15 @@ export default function GameBoard() {
                                     zIndex: 100,
                                 }}
                             >
-                                <div className="absolute -top-4 -right-4 flex flex-wrap gap-[4px] justify-end min-w-[40px]">
+                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-wrap justify-center items-center gap-1 w-[50px] pointer-events-none z-50">
                                     {sortedPlayers.map((p, i) => {
                                         const isCurrent = p.id === currentPlayer?.id;
                                         return (
                                             <div
                                                 key={p.id}
                                                 className={`rounded-full ${p.color} border-2 shadow-xl transition-all duration-300 ${isCurrent
-                                                    ? 'w-8 h-8 border-white ring-4 ring-white/50 animate-pulse'
-                                                    : 'w-5 h-5 border-slate-900 animate-bounce'
+                                                    ? 'w-7 h-7 border-white ring-2 ring-white/50 animate-pulse z-10'
+                                                    : 'w-4 h-4 border-slate-900 animate-bounce'
                                                     }`}
                                                 style={{ animationDelay: `${i * 0.1}s` }}
                                                 title={p.name}
