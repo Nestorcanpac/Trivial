@@ -17,7 +17,7 @@ export default function QuestionCard() {
 
     if (!currentQuestion) return null;
 
-    const isHEIS = currentQuestion.isFinalCenter; // true for both real final and wildcard
+    const isHEIS = currentQuestion.category === 'heis'; // comodín (?) o pregunta final
     const isRealFinalCenter = currentQuestion.isRealFinalCenter;
     const isWildcard = currentQuestion.isWildcard && !isRealFinalCenter;
     const categoryInfo = CATEGORIES[currentQuestion.category];

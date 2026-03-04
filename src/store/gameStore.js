@@ -6,6 +6,7 @@ export const CATEGORIES = {
     red: { id: 'red', color: 'bg-red-500', name: 'Deportes' },
     yellow: { id: 'yellow', color: 'bg-yellow-500', name: 'Cultura Pop' },
     green: { id: 'green', color: 'bg-green-500', name: 'Naturales' },
+    heis: { id: 'heis', color: 'bg-gradient-to-r from-purple-600 to-pink-600', name: 'Pregunta HEIS' },
 };
 
 export const RING_SIZE = 36;
@@ -97,12 +98,13 @@ const getNextSpaces = (currentId, player) => {
 };
 
 const getRandomQuestion = (category, usedQuestions) => {
-    const all = questionsData.filter(q => q.category === category);
-    if (all.length === 0) return null;
+    const poolByCategory = category === 'heis'
+        ? questionsData.filter(q => q.heis === true)
+        : questionsData.filter(q => q.category === category && !q.heis);
+    if (poolByCategory.length === 0) return null;
     const usedIds = usedQuestions[category] || new Set();
-    let pool = all.filter(q => !usedIds.has(q.id));
-    // If pool exhausted, reset and use all
-    if (pool.length === 0) pool = all;
+    let pool = poolByCategory.filter(q => !usedIds.has(q.id));
+    if (pool.length === 0) pool = poolByCategory;
     return pool[Math.floor(Math.random() * pool.length)];
 };
 
@@ -175,9 +177,10 @@ export const useGameStore = create((set, get) => ({
                     clearInterval(interval);
                     const landedSpace = BOARD_SPACES[nextPos];
 
-                    // Wildcard and final center both get a random-category question
-                    const randomCat = ['blue', 'red', 'yellow', 'green'][Math.floor(Math.random() * 4)];
-                    const questionCategory = (isFinalCenter || isWildcard) ? randomCat : landedSpace.category;
+                    // HEIS solo en comodín (?) y en la pregunta final (centro con 4 cuñas).
+                    const questionCategory = (isFinalCenter || isWildcard)
+                        ? 'heis'
+                        : landedSpace.category;
                     const questionData = getRandomQuestion(questionCategory, state.usedQuestions);
 
                     // Mark this question as used

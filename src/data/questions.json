@@ -3022,5 +3022,1381 @@
       "5"
     ],
     "correctAnswer": "4"
+  },
+  {
+    "id": 501,
+    "category": "blue",
+    "question": "¿Se puede fumar dentro del recinto de HEIS?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo en zonas habilitadas",
+      "Depende del turno"
+    ],
+    "correctAnswer": "No",
+    "heis": true
+  },
+  {
+    "id": 502,
+    "category": "red",
+    "question": "¿Está permitido usar perfume en producción?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo en vestuarios",
+      "Depende del área"
+    ],
+    "correctAnswer": "No",
+    "heis": true
+  },
+  {
+    "id": 503,
+    "category": "yellow",
+    "question": "¿Se pueden llevar objetos personales a producción o almacén?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo en bolsos cerrados",
+      "Depende del objeto"
+    ],
+    "correctAnswer": "No",
+    "heis": true
+  },
+  {
+    "id": 504,
+    "category": "green",
+    "question": "¿Está permitido usar pendientes o pulseras en producción?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo pulseras",
+      "Solo alianza de boda"
+    ],
+    "correctAnswer": "No",
+    "heis": true
+  },
+  {
+    "id": 505,
+    "category": "blue",
+    "question": "Si se rompe un cristal en producción, ¿a quién se debe avisar primero?",
+    "options": [
+      "Jefe de Turno",
+      "Mantenimiento",
+      "Calidad",
+      "Supervisor de producción"
+    ],
+    "correctAnswer": "Jefe de Turno",
+    "heis": true
+  },
+  {
+    "id": 506,
+    "category": "red",
+    "question": "¿Las bayetas azules se usan en salas blancas?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo en zonas sucias",
+      "En cualquier zona"
+    ],
+    "correctAnswer": "Sí",
+    "heis": true
+  },
+  {
+    "id": 507,
+    "category": "yellow",
+    "question": "¿El fregasuelos se puede usar en todas las zonas?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo en oficinas",
+      "Solo en vestuarios"
+    ],
+    "correctAnswer": "Sí",
+    "heis": true
+  },
+  {
+    "id": 508,
+    "category": "green",
+    "question": "¿Las bayetas rosas se usan en oficinas?",
+    "options": [
+      "Sí",
+      "No",
+      "En salas blancas",
+      "En almacén"
+    ],
+    "correctAnswer": "No",
+    "heis": true
+  },
+  {
+    "id": 509,
+    "category": "blue",
+    "question": "¿Se puede realizar una carga sin albarán?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo en urgencias",
+      "Con autorización previa"
+    ],
+    "correctAnswer": "No",
+    "heis": true
+  },
+  {
+    "id": 510,
+    "category": "red",
+    "question": "¿Se preparan 3 copias de albarán en una expedición?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo 2 copias",
+      "Depende del cliente"
+    ],
+    "correctAnswer": "Sí",
+    "heis": true
+  },
+  {
+    "id": 511,
+    "category": "yellow",
+    "question": "Si una mercancía necesita muestreo de Calidad, ¿se ubica directamente en almacén?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo si está aprobada",
+      "En zona de cuarentena"
+    ],
+    "correctAnswer": "No",
+    "heis": true
+  },
+  {
+    "id": 512,
+    "category": "green",
+    "question": "En caso de NO OK en recepción, ¿se debe paralizar la descarga?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo con no conformidad grave",
+      "Depende del proveedor"
+    ],
+    "correctAnswer": "Sí",
+    "heis": true
+  },
+  {
+    "id": 513,
+    "category": "blue",
+    "question": "¿Los traslados internos pueden hacerse mediante PDA sin documentación física?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo en almacén",
+      "Solo con autorización"
+    ],
+    "correctAnswer": "Sí",
+    "heis": true
+  },
+  {
+    "id": 514,
+    "category": "red",
+    "question": "¿Se permite llevar la alianza de boda en producción?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo si está lisa",
+      "Depende del área"
+    ],
+    "correctAnswer": "Sí",
+    "heis": true
+  },
+  {
+    "id": 515,
+    "category": "yellow",
+    "question": "¿Se puede beber agua en cualquier parte de producción?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo en zonas de descanso",
+      "Solo fuera de salas blancas"
+    ],
+    "correctAnswer": "No",
+    "heis": true
+  },
+  {
+    "id": 516,
+    "category": "green",
+    "question": "¿Se puede cargar un camión si el pedido está preparado pero todavía no hay albarán impreso?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo con autorización",
+      "Si el albarán está en trámite"
+    ],
+    "correctAnswer": "No",
+    "heis": true
+  },
+  {
+    "id": 517,
+    "category": "blue",
+    "question": "¿Los guantes azules desechables pueden usarse fuera de salas blancas?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo en almacén",
+      "En zonas de producción general"
+    ],
+    "correctAnswer": "No",
+    "heis": true
+  },
+  {
+    "id": 518,
+    "category": "red",
+    "question": "En un alta de referencia de compra, ¿se rellenan datos en la pestaña \"Datos Venta\"?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo algunos campos",
+      "Depende del tipo de referencia"
+    ],
+    "correctAnswer": "No",
+    "heis": true
+  },
+  {
+    "id": 519,
+    "category": "yellow",
+    "question": "Si se hace una duplicación avanzada de una referencia, ¿hay que revisar las versiones creadas?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo la última",
+      "Solo si hay cambios"
+    ],
+    "correctAnswer": "Sí",
+    "heis": true
+  },
+  {
+    "id": 520,
+    "category": "green",
+    "question": "¿Se debe enviar un mail a Quality Systems tras crear una nueva referencia?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo en referencias de compra",
+      "Solo si lo solicita Calidad"
+    ],
+    "correctAnswer": "Sí",
+    "heis": true
+  },
+  {
+    "id": 521,
+    "category": "blue",
+    "question": "En un alta de referencia de venta, ¿hay que rellenar la pestaña \"Datos de Compras\"?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo campos obligatorios",
+      "Depende del producto"
+    ],
+    "correctAnswer": "No",
+    "heis": true
+  },
+  {
+    "id": 522,
+    "category": "red",
+    "question": "En un cambio de lote, ¿los Técnicos deben hacer ajustes de máquina?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo si hay desviación",
+      "Depende del producto"
+    ],
+    "correctAnswer": "No",
+    "heis": true
+  },
+  {
+    "id": 523,
+    "category": "yellow",
+    "question": "En un arranque tras parada, ¿queda registrado en SAP un Control de Calidad – Arranque?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo en paradas largas",
+      "Depende del área"
+    ],
+    "correctAnswer": "No",
+    "heis": true
+  },
+  {
+    "id": 524,
+    "category": "green",
+    "question": "En un inicio de OF, ¿el Técnico puede autorizar la línea antes de verificar que no haya herramientas en la máquina?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo con checklist firmado",
+      "Depende del tipo de línea"
+    ],
+    "correctAnswer": "No",
+    "heis": true
+  },
+  {
+    "id": 525,
+    "category": "blue",
+    "question": "¿El Manual de Calidad se codifica como \"MC\"?",
+    "options": [
+      "Sí",
+      "No",
+      "Se codifica como \"MQ\"",
+      "Depende de la versión"
+    ],
+    "correctAnswer": "Sí",
+    "heis": true
+  },
+  {
+    "id": 526,
+    "category": "red",
+    "question": "¿Las Instrucciones se identifican con la letra \"I\"?",
+    "options": [
+      "Sí",
+      "No",
+      "Con la letra \"IT\"",
+      "Con la letra \"P\""
+    ],
+    "correctAnswer": "Sí",
+    "heis": true
+  },
+  {
+    "id": 527,
+    "category": "yellow",
+    "question": "¿Las versiones en vigor se almacenan en Dropbox?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo las obsoletas",
+      "En SharePoint"
+    ],
+    "correctAnswer": "Sí",
+    "heis": true
+  },
+  {
+    "id": 528,
+    "category": "green",
+    "question": "¿El tiempo mínimo de conservación de la documentación es 5 años?",
+    "options": [
+      "Sí, 5 años",
+      "No, 10 años",
+      "3 años",
+      "15 años"
+    ],
+    "correctAnswer": "No, 10 años",
+    "heis": true
+  },
+  {
+    "id": 529,
+    "category": "blue",
+    "question": "¿Las copias de seguridad se prueban mediante simulacros de restauración?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo una vez al año",
+      "Depende del sistema"
+    ],
+    "correctAnswer": "Sí",
+    "heis": true
+  },
+  {
+    "id": 530,
+    "category": "red",
+    "question": "¿El SGC cumple con la norma ISO 9001?",
+    "options": [
+      "Sí",
+      "No",
+      "En proceso de certificación",
+      "Cumple ISO 14001"
+    ],
+    "correctAnswer": "Sí",
+    "heis": true
+  },
+  {
+    "id": 531,
+    "category": "yellow",
+    "question": "¿Todos los proveedores deben estar previamente homologados?",
+    "options": [
+      "Sí",
+      "No",
+      "Solo los críticos",
+      "Solo para materias primas"
+    ],
+    "correctAnswer": "Sí",
+    "heis": true
+  },
+  {
+    "id": 532,
+    "category": "green",
+    "question": "¿La revisión del Sistema de Calidad se realiza al menos una vez al año?",
+    "options": [
+      "Sí",
+      "No",
+      "Cada dos años",
+      "Solo si hay no conformidades"
+    ],
+    "correctAnswer": "Sí",
+    "heis": true
+  },
+  {
+    "id": 533,
+    "category": "blue",
+    "question": "¿En qué país se encuentra la torre de Pisa?",
+    "options": [
+      "Francia",
+      "Italia",
+      "España",
+      "Portugal"
+    ],
+    "correctAnswer": "Italia"
+  },
+  {
+    "id": 534,
+    "category": "blue",
+    "question": "¿Qué mar separa África de Europa?",
+    "options": [
+      "Mar Negro",
+      "Mar Rojo",
+      "Mar Mediterráneo",
+      "Mar del Norte"
+    ],
+    "correctAnswer": "Mar Mediterráneo"
+  },
+  {
+    "id": 535,
+    "category": "blue",
+    "question": "¿Cuál es la capital de Egipto?",
+    "options": [
+      "Alejandría",
+      "El Cairo",
+      "Luxor",
+      "Giza"
+    ],
+    "correctAnswer": "El Cairo"
+  },
+  {
+    "id": 536,
+    "category": "blue",
+    "question": "¿En qué año comenzó la Guerra Civil española?",
+    "options": [
+      "1934",
+      "1936",
+      "1938",
+      "1940"
+    ],
+    "correctAnswer": "1936"
+  },
+  {
+    "id": 537,
+    "category": "blue",
+    "question": "¿Qué país tiene forma de bota?",
+    "options": [
+      "Grecia",
+      "Italia",
+      "España",
+      "Croacia"
+    ],
+    "correctAnswer": "Italia"
+  },
+  {
+    "id": 538,
+    "category": "blue",
+    "question": "¿Cuál es el río que atraviesa París?",
+    "options": [
+      "Rin",
+      "Sena",
+      "Támesis",
+      "Loira"
+    ],
+    "correctAnswer": "Sena"
+  },
+  {
+    "id": 539,
+    "category": "blue",
+    "question": "¿En qué continente está Madagascar?",
+    "options": [
+      "Asia",
+      "África",
+      "Oceanía",
+      "América"
+    ],
+    "correctAnswer": "África"
+  },
+  {
+    "id": 540,
+    "category": "blue",
+    "question": "¿Qué imperio construyó el Coliseo de Roma?",
+    "options": [
+      "Bizantino",
+      "Romano",
+      "Griego",
+      "Persa"
+    ],
+    "correctAnswer": "Romano"
+  },
+  {
+    "id": 541,
+    "category": "blue",
+    "question": "¿Cuál es la capital de Polonia?",
+    "options": [
+      "Cracovia",
+      "Gdansk",
+      "Varsovia",
+      "Lodz"
+    ],
+    "correctAnswer": "Varsovia"
+  },
+  {
+    "id": 542,
+    "category": "blue",
+    "question": "¿En qué año se hundió el Titanic?",
+    "options": [
+      "1910",
+      "1912",
+      "1914",
+      "1916"
+    ],
+    "correctAnswer": "1912"
+  },
+  {
+    "id": 543,
+    "category": "blue",
+    "question": "¿Qué país es el más pequeño de América del Sur?",
+    "options": [
+      "Ecuador",
+      "Surinam",
+      "Guyana",
+      "Uruguay"
+    ],
+    "correctAnswer": "Surinam"
+  },
+  {
+    "id": 544,
+    "category": "blue",
+    "question": "¿Cuál es la capital de Irlanda?",
+    "options": [
+      "Cork",
+      "Galway",
+      "Dublín",
+      "Limerick"
+    ],
+    "correctAnswer": "Dublín"
+  },
+  {
+    "id": 545,
+    "category": "blue",
+    "question": "¿Qué océano baña las costas de Chile?",
+    "options": [
+      "Atlántico",
+      "Índico",
+      "Pacífico",
+      "Ártico"
+    ],
+    "correctAnswer": "Pacífico"
+  },
+  {
+    "id": 546,
+    "category": "blue",
+    "question": "¿En qué año cayó el Imperio Romano de Occidente?",
+    "options": [
+      "376",
+      "410",
+      "476",
+      "493"
+    ],
+    "correctAnswer": "476"
+  },
+  {
+    "id": 547,
+    "category": "blue",
+    "question": "¿Cuál es la capital de Argentina?",
+    "options": [
+      "Córdoba",
+      "Buenos Aires",
+      "Rosario",
+      "Mendoza"
+    ],
+    "correctAnswer": "Buenos Aires"
+  },
+  {
+    "id": 548,
+    "category": "blue",
+    "question": "¿Qué país tiene más volcanes activos?",
+    "options": [
+      "Japón",
+      "Indonesia",
+      "Chile",
+      "Estados Unidos"
+    ],
+    "correctAnswer": "Indonesia"
+  },
+  {
+    "id": 549,
+    "category": "blue",
+    "question": "¿En qué año se creó la ONU?",
+    "options": [
+      "1943",
+      "1945",
+      "1947",
+      "1950"
+    ],
+    "correctAnswer": "1945"
+  },
+  {
+    "id": 550,
+    "category": "blue",
+    "question": "¿Cuál es la montaña más alta de África?",
+    "options": [
+      "Atlas",
+      "Kilimanjaro",
+      "Kenia",
+      "Toubkal"
+    ],
+    "correctAnswer": "Kilimanjaro"
+  },
+  {
+    "id": 551,
+    "category": "blue",
+    "question": "¿Qué país europeo no tiene costa marítima?",
+    "options": [
+      "Suiza",
+      "Austria",
+      "Hungría",
+      "Todos tienen"
+    ],
+    "correctAnswer": "Suiza"
+  },
+  {
+    "id": 552,
+    "category": "blue",
+    "question": "¿En qué siglo se descubrió América?",
+    "options": [
+      "XIV",
+      "XV",
+      "XVI",
+      "XVII"
+    ],
+    "correctAnswer": "XV"
+  },
+  {
+    "id": 553,
+    "category": "red",
+    "question": "¿Cuántos jugadores hay en un equipo de rugby en el campo?",
+    "options": [
+      "11",
+      "13",
+      "15",
+      "17"
+    ],
+    "correctAnswer": "15"
+  },
+  {
+    "id": 554,
+    "category": "red",
+    "question": "¿Qué país ganó el Mundial de fútbol 2018?",
+    "options": [
+      "Croacia",
+      "Francia",
+      "Bélgica",
+      "Inglaterra"
+    ],
+    "correctAnswer": "Francia"
+  },
+  {
+    "id": 555,
+    "category": "red",
+    "question": "¿En qué deporte destaca Tiger Woods?",
+    "options": [
+      "Tenis",
+      "Golf",
+      "Fútbol",
+      "Béisbol"
+    ],
+    "correctAnswer": "Golf"
+  },
+  {
+    "id": 556,
+    "category": "red",
+    "question": "¿Cuántos Grand Slams tiene Novak Djokovic?",
+    "options": [
+      "22",
+      "23",
+      "24",
+      "25"
+    ],
+    "correctAnswer": "24"
+  },
+  {
+    "id": 557,
+    "category": "red",
+    "question": "¿Qué equipo de NBA tiene más anillos?",
+    "options": [
+      "Lakers",
+      "Celtics",
+      "Bulls",
+      "Warriors"
+    ],
+    "correctAnswer": "Celtics"
+  },
+  {
+    "id": 558,
+    "category": "red",
+    "question": "¿En qué ciudad está el estadio Old Trafford?",
+    "options": [
+      "Liverpool",
+      "Manchester",
+      "Londres",
+      "Birmingham"
+    ],
+    "correctAnswer": "Manchester"
+  },
+  {
+    "id": 559,
+    "category": "red",
+    "question": "¿Qué país inventó el fútbol?",
+    "options": [
+      "Italia",
+      "Brasil",
+      "Inglaterra",
+      "Alemania"
+    ],
+    "correctAnswer": "Inglaterra"
+  },
+  {
+    "id": 560,
+    "category": "red",
+    "question": "¿Cuántos puntos vale un touchdown en fútbol americano?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correctAnswer": "6"
+  },
+  {
+    "id": 561,
+    "category": "red",
+    "question": "¿Qué tenista tiene más títulos de Wimbledon?",
+    "options": [
+      "Federer",
+      "Nadal",
+      "Djokovic",
+      "Sampras"
+    ],
+    "correctAnswer": "Federer"
+  },
+  {
+    "id": 562,
+    "category": "red",
+    "question": "¿En qué año se celebraron los JJOO en Río?",
+    "options": [
+      "2012",
+      "2014",
+      "2016",
+      "2018"
+    ],
+    "correctAnswer": "2016"
+  },
+  {
+    "id": 563,
+    "category": "red",
+    "question": "¿Qué país ganó la Eurocopa 2016?",
+    "options": [
+      "Francia",
+      "Portugal",
+      "Alemania",
+      "Gales"
+    ],
+    "correctAnswer": "Portugal"
+  },
+  {
+    "id": 564,
+    "category": "red",
+    "question": "¿Cuántas vueltas tiene el Tour de Francia?",
+    "options": [
+      "18",
+      "20",
+      "21",
+      "23"
+    ],
+    "correctAnswer": "21"
+  },
+  {
+    "id": 565,
+    "category": "red",
+    "question": "¿En qué deporte compitió Michael Phelps?",
+    "options": [
+      "Atletismo",
+      "Natación",
+      "Ciclismo",
+      "Remo"
+    ],
+    "correctAnswer": "Natación"
+  },
+  {
+    "id": 566,
+    "category": "red",
+    "question": "¿Qué equipo ganó la Champions 2023?",
+    "options": [
+      "Real Madrid",
+      "Manchester City",
+      "Inter",
+      "Bayern"
+    ],
+    "correctAnswer": "Manchester City"
+  },
+  {
+    "id": 567,
+    "category": "red",
+    "question": "¿Cuántos jugadores forman un equipo de balonmano en pista?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correctAnswer": "7"
+  },
+  {
+    "id": 568,
+    "category": "red",
+    "question": "¿En qué país se juega el Super Bowl?",
+    "options": [
+      "Canadá",
+      "México",
+      "Estados Unidos",
+      "Inglaterra"
+    ],
+    "correctAnswer": "Estados Unidos"
+  },
+  {
+    "id": 569,
+    "category": "red",
+    "question": "¿Qué atleta tiene el récord del mundo de 100 m lisos?",
+    "options": [
+      "Bolt",
+      "Gatlin",
+      "Powell",
+      "Blake"
+    ],
+    "correctAnswer": "Bolt"
+  },
+  {
+    "id": 570,
+    "category": "red",
+    "question": "¿Cuántas medallas de oro ganó Usain Bolt en JJOO?",
+    "options": [
+      "6",
+      "8",
+      "9",
+      "11"
+    ],
+    "correctAnswer": "8"
+  },
+  {
+    "id": 571,
+    "category": "red",
+    "question": "¿Qué país ganó el Mundial de baloncesto 2023?",
+    "options": [
+      "España",
+      "Alemania",
+      "Estados Unidos",
+      "Francia"
+    ],
+    "correctAnswer": "Alemania"
+  },
+  {
+    "id": 572,
+    "category": "red",
+    "question": "¿En qué ciudad está el estadio San Siro?",
+    "options": [
+      "Roma",
+      "Turín",
+      "Nápoles",
+      "Milán"
+    ],
+    "correctAnswer": "Milán"
+  },
+  {
+    "id": 573,
+    "category": "yellow",
+    "question": "¿Qué serie tiene la frase \"Winter is coming\"?",
+    "options": [
+      "Vikings",
+      "Game of Thrones",
+      "The Witcher",
+      "Outlander"
+    ],
+    "correctAnswer": "Game of Thrones"
+  },
+  {
+    "id": 574,
+    "category": "yellow",
+    "question": "¿Quién pintó \"El grito\"?",
+    "options": [
+      "Van Gogh",
+      "Munch",
+      "Picasso",
+      "Dalí"
+    ],
+    "correctAnswer": "Munch"
+  },
+  {
+    "id": 575,
+    "category": "yellow",
+    "question": "¿En qué año se estrenó \"Los Simpson\"?",
+    "options": [
+      "1987",
+      "1989",
+      "1991",
+      "1993"
+    ],
+    "correctAnswer": "1989"
+  },
+  {
+    "id": 576,
+    "category": "yellow",
+    "question": "¿Qué grupo cantaba \"Bohemian Rhapsody\"?",
+    "options": [
+      "The Beatles",
+      "Queen",
+      "Led Zeppelin",
+      "Pink Floyd"
+    ],
+    "correctAnswer": "Queen"
+  },
+  {
+    "id": 577,
+    "category": "yellow",
+    "question": "¿Cuál es el nombre del bar de \"Cheers\"?",
+    "options": [
+      "Cheers",
+      "McLaren's",
+      "Central Perk",
+      "The Drunken Clam"
+    ],
+    "correctAnswer": "Cheers"
+  },
+  {
+    "id": 578,
+    "category": "yellow",
+    "question": "¿Qué película ganó el Óscar 2024 a Mejor Película?",
+    "options": [
+      "Oppenheimer",
+      "Pobres criaturas",
+      "Barbie",
+      "Killers of the Flower Moon"
+    ],
+    "correctAnswer": "Oppenheimer"
+  },
+  {
+    "id": 579,
+    "category": "yellow",
+    "question": "¿Quién escribió \"Cien años de soledad\"?",
+    "options": [
+      "Borges",
+      "García Márquez",
+      "Vargas Llosa",
+      "Cortázar"
+    ],
+    "correctAnswer": "García Márquez"
+  },
+  {
+    "id": 580,
+    "category": "yellow",
+    "question": "¿Qué plataforma lanzó \"The Crown\"?",
+    "options": [
+      "HBO",
+      "Netflix",
+      "Amazon",
+      "Disney+"
+    ],
+    "correctAnswer": "Netflix"
+  },
+  {
+    "id": 581,
+    "category": "yellow",
+    "question": "¿Cuántos anillos tiene el logo de los JJOO?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "correctAnswer": "5"
+  },
+  {
+    "id": 582,
+    "category": "yellow",
+    "question": "¿Qué artista tiene el álbum \"21\"?",
+    "options": [
+      "Taylor Swift",
+      "Adele",
+      "Rihanna",
+      "Beyoncé"
+    ],
+    "correctAnswer": "Adele"
+  },
+  {
+    "id": 583,
+    "category": "yellow",
+    "question": "¿En qué ciudad se desarrolla \"Friends\"?",
+    "options": [
+      "Boston",
+      "Los Ángeles",
+      "Nueva York",
+      "Chicago"
+    ],
+    "correctAnswer": "Nueva York"
+  },
+  {
+    "id": 584,
+    "category": "yellow",
+    "question": "¿Qué director dirigió \"Avatar\"?",
+    "options": [
+      "Spielberg",
+      "Cameron",
+      "Nolan",
+      "Scott"
+    ],
+    "correctAnswer": "Cameron"
+  },
+  {
+    "id": 585,
+    "category": "yellow",
+    "question": "¿Cuál es la primera película de Disney?",
+    "options": [
+      "Cenicienta",
+      "Blanca Nieves",
+      "Pinocho",
+      "Dumbo"
+    ],
+    "correctAnswer": "Blanca Nieves"
+  },
+  {
+    "id": 586,
+    "category": "yellow",
+    "question": "¿Qué banda es \"AC/DC\"?",
+    "options": [
+      "Británica",
+      "Australiana",
+      "Americana",
+      "Canadiense"
+    ],
+    "correctAnswer": "Australiana"
+  },
+  {
+    "id": 587,
+    "category": "yellow",
+    "question": "¿En qué año nació Elvis Presley?",
+    "options": [
+      "1933",
+      "1935",
+      "1937",
+      "1940"
+    ],
+    "correctAnswer": "1935"
+  },
+  {
+    "id": 588,
+    "category": "yellow",
+    "question": "¿Qué serie tiene a Walter White?",
+    "options": [
+      "Better Call Saul",
+      "Breaking Bad",
+      "The Wire",
+      "Narcos"
+    ],
+    "correctAnswer": "Breaking Bad"
+  },
+  {
+    "id": 589,
+    "category": "yellow",
+    "question": "¿Cuántas películas tiene la saga \"Rápido y Furioso\"?",
+    "options": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "correctAnswer": "10"
+  },
+  {
+    "id": 590,
+    "category": "yellow",
+    "question": "¿Qué cantante es \"La reina del pop\"?",
+    "options": [
+      "Britney",
+      "Madonna",
+      "Gaga",
+      "Rihanna"
+    ],
+    "correctAnswer": "Madonna"
+  },
+  {
+    "id": 591,
+    "category": "yellow",
+    "question": "¿En qué año se fundó Netflix?",
+    "options": [
+      "1995",
+      "1997",
+      "1999",
+      "2001"
+    ],
+    "correctAnswer": "1997"
+  },
+  {
+    "id": 592,
+    "category": "yellow",
+    "question": "¿Qué instrumento toca Jimi Hendrix?",
+    "options": [
+      "Bajo",
+      "Batería",
+      "Guitarra",
+      "Teclado"
+    ],
+    "correctAnswer": "Guitarra"
+  },
+  {
+    "id": 593,
+    "category": "green",
+    "question": "¿Cuántas patas tiene un insecto?",
+    "options": [
+      "4",
+      "6",
+      "8",
+      "10"
+    ],
+    "correctAnswer": "6"
+  },
+  {
+    "id": 594,
+    "category": "green",
+    "question": "¿Qué planeta es el más cercano a la Tierra?",
+    "options": [
+      "Marte",
+      "Venus",
+      "Mercurio",
+      "Júpiter"
+    ],
+    "correctAnswer": "Venus"
+  },
+  {
+    "id": 595,
+    "category": "green",
+    "question": "¿Cuál es el hueso más largo del cuerpo humano?",
+    "options": [
+      "Tibia",
+      "Fémur",
+      "Húmero",
+      "Peroné"
+    ],
+    "correctAnswer": "Fémur"
+  },
+  {
+    "id": 596,
+    "category": "green",
+    "question": "¿Qué gas emiten las plantas por la noche?",
+    "options": [
+      "Oxígeno",
+      "Nitrógeno",
+      "CO2",
+      "Vapor de agua"
+    ],
+    "correctAnswer": "CO2"
+  },
+  {
+    "id": 597,
+    "category": "green",
+    "question": "¿Cuántos dientes tiene un adulto?",
+    "options": [
+      "28",
+      "30",
+      "32",
+      "34"
+    ],
+    "correctAnswer": "32"
+  },
+  {
+    "id": 598,
+    "category": "green",
+    "question": "¿Qué tipo de animal es una ballena?",
+    "options": [
+      "Pez",
+      "Reptil",
+      "Mamífero",
+      "Anfibio"
+    ],
+    "correctAnswer": "Mamífero"
+  },
+  {
+    "id": 599,
+    "category": "green",
+    "question": "¿Cuál es el órgano que filtra la sangre?",
+    "options": [
+      "Hígado",
+      "Riñón",
+      "Pulmón",
+      "Corazón"
+    ],
+    "correctAnswer": "Riñón"
+  },
+  {
+    "id": 600,
+    "category": "green",
+    "question": "¿A qué reino pertenecen los hongos?",
+    "options": [
+      "Animal",
+      "Vegetal",
+      "Fungi",
+      "Monera"
+    ],
+    "correctAnswer": "Fungi"
+  },
+  {
+    "id": 601,
+    "category": "green",
+    "question": "¿Cuántos latidos por minuto tiene un corazón en reposo?",
+    "options": [
+      "40-50",
+      "60-100",
+      "100-120",
+      "120-140"
+    ],
+    "correctAnswer": "60-100"
+  },
+  {
+    "id": 602,
+    "category": "green",
+    "question": "¿Qué vitamina es la naranja?",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C"
+  },
+  {
+    "id": 603,
+    "category": "green",
+    "question": "¿Cuál es el único mamífero que vuela?",
+    "options": [
+      "Pájaro",
+      "Murciélago",
+      "Ardilla voladora",
+      "Pez volador"
+    ],
+    "correctAnswer": "Murciélago"
+  },
+  {
+    "id": 604,
+    "category": "green",
+    "question": "¿Qué partícula tiene carga positiva?",
+    "options": [
+      "Electrón",
+      "Neutrón",
+      "Protón",
+      "Fotón"
+    ],
+    "correctAnswer": "Protón"
+  },
+  {
+    "id": 605,
+    "category": "green",
+    "question": "¿Cuántos corazones tiene un gusano?",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correctAnswer": "0"
+  },
+  {
+    "id": 606,
+    "category": "green",
+    "question": "¿Qué capa protege la Tierra de los rayos UV?",
+    "options": [
+      "Troposfera",
+      "Estratosfera",
+      "Ozono",
+      "Ionosfera"
+    ],
+    "correctAnswer": "Ozono"
+  },
+  {
+    "id": 607,
+    "category": "green",
+    "question": "¿Cuál es el animal más rápido del mundo?",
+    "options": [
+      "Guepardo",
+      "Halcón peregrino",
+      "León",
+      "Águila"
+    ],
+    "correctAnswer": "Halcón peregrino"
+  },
+  {
+    "id": 608,
+    "category": "green",
+    "question": "¿Qué elemento tiene el símbolo K?",
+    "options": [
+      "Potasio",
+      "Kriptón",
+      "Kriptonita",
+      "Calcio"
+    ],
+    "correctAnswer": "Potasio"
+  },
+  {
+    "id": 609,
+    "category": "green",
+    "question": "¿Cuántos meses tiene un embarazo humano?",
+    "options": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "correctAnswer": "9"
+  },
+  {
+    "id": 610,
+    "category": "green",
+    "question": "¿Qué planeta tiene anillos visibles?",
+    "options": [
+      "Júpiter",
+      "Saturno",
+      "Urano",
+      "Todos"
+    ],
+    "correctAnswer": "Saturno"
+  },
+  {
+    "id": 611,
+    "category": "green",
+    "question": "¿Cuál es el gas más abundante en el aire?",
+    "options": [
+      "Oxígeno",
+      "CO2",
+      "Nitrógeno",
+      "Argón"
+    ],
+    "correctAnswer": "Nitrógeno"
+  },
+  {
+    "id": 612,
+    "category": "green",
+    "question": "¿Qué célula transporta el oxígeno?",
+    "options": [
+      "Plaqueta",
+      "Glóbulo rojo",
+      "Glóbulo blanco",
+      "Linfocito"
+    ],
+    "correctAnswer": "Glóbulo rojo"
   }
 ]
